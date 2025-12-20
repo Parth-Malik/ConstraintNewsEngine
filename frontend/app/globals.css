@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  --background: #020205; /* Deep Obsidian */
+  --foreground: #f0f9ff;
+  --accent-cyan: #00f2ff;
+  --accent-purple: #8b5cf6;
+  --accent-red: #ff3e3e; /* CTA color from inspiration */
+}
+
+@theme {
+  --color-obsidian: var(--background);
+  --color-neon-cyan: var(--accent-cyan);
+  --color-neon-purple: var(--accent-purple);
+  --color-neon-red: var(--accent-red);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* HIGH-TECH BLUEPRINT GRID */
+.blueprint-grid {
+  background-image: 
+    linear-gradient(to right, rgba(0, 242, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 242, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* ISOMETRIC CARD PERSPECTIVE */
+.perspective-container {
+  perspective: 2500px;
+}
+
+/* CUSTOM NEON SCROLLBAR */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #020205;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, var(--accent-cyan), var(--accent-purple));
+  border-radius: 10px;
+}
+
+/* UTILITY: GLASSMORPHISM */
+.glass-panel {
+  background: rgba(10, 10, 20, 0.6);
+  backdrop-filter: blur(120px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
